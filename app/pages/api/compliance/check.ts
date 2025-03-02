@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const supervisor = createComplianceSupervisorAgent({
       business,
       mode,
-      llm: { model: 'R1LlamaDistill', endpoint: process.env.OLLAMA_URL },
+      llm: { model: 'R1LlamaDistill', endpoint: process.env.OLLAMA_URL as string },
       tools: [] // Add tools like the Playwright agent as needed
     });
 
