@@ -20,7 +20,6 @@ const businessAccounts = [
 
 export function BusinessProfileDashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedAccount, setSelectedAccount] = useState<number | null>(null)
 
   const handleRowClick = (accountId: number) => {
     setIsModalOpen(true)

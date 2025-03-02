@@ -541,8 +541,8 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
                     <div className="flex flex-col gap-4 max-w-[80%]">
                       <div className="bg-[#F3F4F6] rounded-xl p-4">
                         <p className="text-black mb-3">
-                          👋 Welcome! I'm here to help you develop a strong, consistent brand voice. Let's work together
-                          to define your brand's personality and tone.
+                          👋 Welcome! I&apos;m here to help you develop a strong, consistent brand voice. Let&apos;s work together
+                          to define your brand&apos;s personality and tone.
                         </p>
                         <p className="text-gray-600 mb-3">
                           You can start by describing your ideal brand voice, or upload examples of content that
