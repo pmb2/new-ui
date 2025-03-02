@@ -4,7 +4,7 @@ export function createComplianceSupervisorAgent(options: {
   business: { id: string };
   mode: string;
   llm: { model: string; endpoint: string };
-  tools: any[];
+  tools: unknown[];
 }) {
   // Dummy implementation: simulate running compliance checks, then log results in the database.
   return {
