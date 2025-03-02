@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Unified Next.js Front-End Integration
+
+This project integrates three core back-end modules into a unified Next.js front-end UI with dedicated tabs for Compliance, Brand Alignment, and Competitor Research.
 
 ## Getting Started
 
@@ -6,31 +8,38 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the live application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Integration Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Accomplished
+- **Compliance Engine Integration**: Implemented a front-end Compliance Checklist that interacts with the back-end compliance check API. Users can select between Full Automation and Human-in-the-Loop modes.
+- **Brand Alignment Integration**: Set up a dynamic Brand Alignment Q&A interface that fetches insights using a local hybrid search RAG system.
+- **Competitor Research Integration**: Developed a Competitor Research tab that initiates automated competitor analysis and supports follow-up queries.
+- **Unified Client-Side Interactivity**: Ensured all interactive components (buttons, dialogs, forms) are client components using the `"use client"` directive.
+
+### In Progress / Pending
+- **Advanced Multi-Agent Supervisor**: Further integration of LangChain/LangGraph for finer-grained compliance steps including real-time streaming of compliance check updates.
+- **Email Notification Integration**: Implement real email notifications for compliance steps flagged for human review.
+- **Unified Database and Async Processing**: Enhance the database layer and incorporate asynchronous processing for long-running tasks like detailed competitor research.
+- **Security and Rate-Limiting Enhancements**: Implement further security protocols and rate limiting for enhanced production-readiness.
+- **Additional UI/UX Enhancements**: Improve error handling, loading states, and mobile responsiveness.
+
+## Project Overview
+
+This application leverages a unified back-end strategy to integrate:
+- **Compliance Engine**: Uses AI components (LLM via Ollama and browser automation via Playwright) to validate business profiles.
+- **Brand Alignment RAG**: Fetches and synthesizes brand-related documents using hybrid search techniques and LLM.
+- **Competitor Research**: Utilizes automated research flows to generate comprehensive competitor profiles with an option for iterative follow-ups.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [LangChain Documentation](https://python.langchain.com/)
+- [Ollama API Reference](https://ollama.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Directions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The roadmap outlines our phased approach from MVP to a fully integrated, scalable, and secure multi-tenant platform. Contributions and feedback are welcome as we expand these features.
