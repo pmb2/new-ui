@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/app/components/ui/button"
+import Image from "next/image"
 
 export function ChatBubble() {
   return (

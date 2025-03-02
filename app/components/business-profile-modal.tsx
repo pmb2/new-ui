@@ -239,9 +239,11 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
         <div className="px-6 py-4 flex justify-between items-center border-b relative">
           <h2 className="text-lg font-medium">Business Profile Account</h2>
           <Button variant="ghost" size="icon" className="h-8 w-8">
-            <img
+            <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pencil-dU5dMJDm9paKGUCdBJX5awBEHoRhXl.png"
               alt="Edit"
+              width={16}
+              height={16}
               className="w-4 h-4 opacity-80"
             />
           </Button>

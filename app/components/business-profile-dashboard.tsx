@@ -53,9 +53,11 @@ export function BusinessProfileDashboard() {
           <div className="flex items-center justify-between mb-10 min-w-[600px]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <img
+              <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20dark-N5hNGX8uspWM4QBB8z1fDk6zcUTXpN.png"
                 alt="Chara AI Logo"
+                width={256}
+                height={64}
                 className="h-16 w-auto"
               />
             </div>
