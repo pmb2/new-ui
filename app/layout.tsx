@@ -16,6 +16,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "SocialG",
   description: "Socials handled.",
+  icons: {
+    icon: "/flavicon.ico",
+  },
 };
 
 export default function RootLayout({
