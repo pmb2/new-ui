@@ -179,7 +179,7 @@ export function FeedbackButton() {
                 )}
 
                 {/* Priority Selection - For bugs and features */}
-                {(feedbackType === "bug" || feedbackType === "feature") && (
+                {(currentFeedbackType === "bug" || currentFeedbackType === "feature") && (
                   <div className="space-y-2">
                     <Label htmlFor="priority">Priority</Label>
                     <RadioGroup defaultValue="medium" className="flex gap-4">
