@@ -58,9 +58,11 @@ export function FeedbackButton() {
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full bg-gradient-to-b from-[#FF1681] to-[#FFAB1A] shadow-lg hover:opacity-90"
         onClick={() => setIsOpen(true)}
       >
-        <img
+        <Image
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mask%20group%20(8)-DcPWOQsZME6DH3YHaew1g9ss4Fz1pV.png"
           alt="Feedback"
+          width={24}
+          height={24}
           className="w-6 h-6"
         />
       </Button>

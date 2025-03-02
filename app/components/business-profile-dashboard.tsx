@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/app/components/ui/table"
 import { Dialog, DialogContent } from "@/app/components/ui/dialog"
 import { Button } from "@/app/components/ui/button"
@@ -36,10 +37,12 @@ export function BusinessProfileDashboard() {
       <div className="flex justify-between items-center px-8 py-4 bg-black">
         <h1 className="text-xl text-white">Dashboard</h1>
         <Button variant="ghost" size="icon" className="rounded-full p-0">
-          <img
+          <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mask%20group%20(2)%201-5RMiT8g4J4BzlQiRnu7aemEcs324uL.png"
             alt="User"
-            className="rounded-full w-10 h-10 object-cover"
+            width={40}
+            height={40}
+            className="rounded-full object-cover"
           />
         </Button>
       </div>

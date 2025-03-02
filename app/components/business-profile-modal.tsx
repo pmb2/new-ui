@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { X, Clock, CheckCircle2, XCircle, HelpCircle } from "lucide-react"
 import { Button } from "@/app/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs"
@@ -266,9 +267,11 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
       <div className="px-6 py-4 flex justify-between items-center border-b relative">
         <h2 className="text-lg font-medium">Business Profile Account</h2>
         <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => setIsEditing(true)}>
-          <img
+          <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pencil-dU5dMJDm9paKGUCdBJX5awBEHoRhXl.png"
             alt="Edit"
+            width={16}
+            height={16}
             className="w-4 h-4 opacity-80"
           />
         </Button>
@@ -532,9 +535,11 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
                 <div className="flex-1 p-6 space-y-6">
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FFAB1A] via-[#FF1681] to-[#0080FF] flex items-center justify-center">
-                      <img
+                      <Image
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mask%20group%20(8)-DcPWOQsZME6DH3YHaew1g9ss4Fz1pV.png"
                         alt="AI Assistant"
+                        width={24}
+                        height={24}
                         className="w-6 h-6"
                       />
                     </div>

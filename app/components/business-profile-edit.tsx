@@ -1,10 +1,12 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image"
 
 import { useEffect, useState } from "react"
 import { X } from "lucide-react"
 import { Button } from "@/app/components/ui/button"
+import Image from "next/image"
 import { Input } from "@/app/components/ui/input"
 import { Label } from "@/app/components/ui/label"
 import { Textarea } from "@/app/components/ui/textarea"
