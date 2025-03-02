@@ -91,7 +91,7 @@ export function FeedbackButton() {
                   <Label>What type of feedback do you have?</Label>
                   <RadioGroup
                     defaultValue="bug"
-                    onValueChange={(value) => setFeedbackType(value as typeof feedbackType)}
+                    onValueChange={(value) => setCurrentFeedbackType(value as "bug" | "feature" | "feedback")}
                     className="grid grid-cols-3 gap-4"
                   >
                     {feedbackTypes.map((option) => (
