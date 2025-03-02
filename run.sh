@@ -1,8 +1,11 @@
 #!/bin/bash
 set -e
 
-echo "Cleaning .next directory..."
-rm -rf .next
+echo "Cleaning .next directory, node_modules, and package-lock.json..."
+rm -rf .next node_modules package-lock.json
+
+echo "Installing dependencies..."
+npm install
 
 echo "Building project..."
 npm run build
