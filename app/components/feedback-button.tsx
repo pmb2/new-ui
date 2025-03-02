@@ -136,9 +136,9 @@ export function FeedbackButton() {
                   <Textarea
                     id="description"
                     placeholder={
-                      feedbackType === "bug"
+                      currentFeedbackType === "bug"
                         ? "What happened? What did you expect to happen? Steps to reproduce?"
-                        : feedbackType === "feature"
+                        : currentFeedbackType === "feature"
                           ? "Describe the feature you'd like to see. What problem would it solve?"
                           : "Tell us what's on your mind"
                     }
