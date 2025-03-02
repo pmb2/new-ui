@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/social_gbp?schema=public
+      - OLLAMA_URL=${OLLAMA_URL}
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: social_gbp
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
