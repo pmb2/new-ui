@@ -13,7 +13,7 @@ export async function getGroqChatCompletion() {
     messages: [
       {
         role: "user",
-        content: "Example text",
+        content: "You are a highly intelligent reasoning supervisor.Your goal is to ensure the agents stay on task until completion and that the ultimate goal is achieved.",
       },
     ],
     model: "deepseek-r1-distill-llama-70b",
