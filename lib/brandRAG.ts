@@ -1,9 +1,9 @@
 export const brandRAG = {
-  search: async (query: string, businessId: string) => {
+  search: async (_query: string, _businessId: string) => {
     // Dummy implementation: return an empty array of documents.
     return [];
   },
-  generateAnswer: async (query: string, docs: any[]) => {
+  generateAnswer: async (_query: string, _docs: unknown[]) => {
     // Dummy implementation: return a fixed answer string.
     return "This is a dummy answer from brandRAG.";
   },

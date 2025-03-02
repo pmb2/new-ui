@@ -1,4 +1,4 @@
-export function createComplianceSupervisorAgent(options: any) {
+export function createComplianceSupervisorAgent(options: unknown) {
   // Dummy implementation: return an agent with a runAllChecks method.
   return {
     runAllChecks: async () => {

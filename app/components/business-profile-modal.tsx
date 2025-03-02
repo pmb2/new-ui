@@ -134,12 +134,6 @@ const getComplianceReport = async (businessId: number) => {
 }
 
 // Add a function to resolve compliance issues
-const resolveComplianceIssue = async (businessId: number, issueType: string, data: any) => {
-  console.log(`Resolving issue ${issueType} for business ID: ${businessId} with data:`, data)
-  // In a real implementation, this would call:
-  // POST /api/compliance/${businessId}/resolve
-  return { success: true }
-}
 
 const StepIcon = ({ status }: { status: Step["status"] }) => {
   switch (status) {
@@ -178,7 +172,7 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
   const [currentStepIndex, setCurrentStepIndex] = useState(0)
   const [isRunningCheck, setIsRunningCheck] = useState(false)
   const [complianceReport, setComplianceReport] = useState<any>(null)
-  const [businessId, setBusinessId] = useState(1) // Mock business ID
+  const businessId = 1; // Mock business ID
   const [currentActionIndex, setCurrentActionIndex] = useState(0)
   const [isMemoriesOpen, setIsMemoriesOpen] = useState(false)
 
