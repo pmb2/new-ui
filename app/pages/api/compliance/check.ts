@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getBusinessById } from '../../../lib/business';
-import { createComplianceSupervisorAgent } from '../../../lib/complianceAgent';
+import { getBusinessById } from '../../../../lib/business';
+import { createComplianceSupervisorAgent } from '../../../../lib/complianceAgent';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { businessId, mode } = req.body;

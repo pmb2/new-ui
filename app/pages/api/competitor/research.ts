@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { runCompetitorResearch } from '../../../lib/competitorResearch';
-import { saveCompetitorReport } from '../../../lib/database';
+import { runCompetitorResearch } from '../../../../lib/competitorResearch';
+import { saveCompetitorReport } from '../../../../lib/database';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { businessId, competitor } = req.body;

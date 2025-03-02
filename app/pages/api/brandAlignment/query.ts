@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { brandRAG } from '../../../lib/brandRAG';
+import { brandRAG } from '../../../../lib/brandRAG';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { businessId, query } = req.body;
