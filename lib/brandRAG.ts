@@ -3,6 +3,12 @@ export const brandRAG = {
     console.log('brandRAG search for business', businessId)
     // Use groq via Ollama for search with model "llama-3.1-8b-instant"
     const endpoint = process.env.OLLAMA_URL;
+    if (!endpoint) {
+      throw new Error("Missing OLLAMA_URL environment variable");
+    }
+    if (!endpoint) {
+      throw new Error("Missing OLLAMA_URL environment variable");
+    }
     const payload = {
       groq: "search",
       query,
