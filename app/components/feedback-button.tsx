@@ -147,7 +147,7 @@ export function FeedbackButton() {
                 </div>
 
                 {/* File Upload - Only for bug reports */}
-                {feedbackType === "bug" && (
+                {currentFeedbackType === "bug" && (
                   <div className="space-y-2">
                     <Label>Attachments</Label>
                     <div className="flex items-center gap-4">
