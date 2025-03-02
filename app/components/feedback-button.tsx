@@ -16,7 +16,7 @@ import { AlertCircle, Lightbulb, Upload, X } from "lucide-react"
 
 export function FeedbackButton() {
   const [isOpen, setIsOpen] = useState(false)
-  const [feedbackType, setFeedbackType] = useState<"bug" | "feature" | "feedback">("bug")
+  const [currentFeedbackType, setCurrentFeedbackType] = useState<"bug" | "feature" | "feedback">("bug")
   const [files, setFiles] = useState<File[]>([])
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -120,9 +120,9 @@ export function FeedbackButton() {
                   <Input
                     id="title"
                     placeholder={
-                      feedbackType === "bug"
+                      currentFeedbackType === "bug"
                         ? "Describe the issue in a few words"
-                        : feedbackType === "feature"
+                        : currentFeedbackType === "feature"
                           ? "Name your feature request"
                           : "Subject of your feedback"
                     }
