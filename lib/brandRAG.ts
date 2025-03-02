@@ -28,6 +28,9 @@ export const brandRAG = {
   generateAnswer: async (query: string, docs: unknown[]) => {
     // Use groq via Ollama for answer generation with model "llama-3.1-8b-instant"
     const endpoint = process.env.OLLAMA_URL;
+    if (!endpoint) {
+      throw new Error("Missing OLLAMA_URL environment variable");
+    }
     const payload = {
       groq: "generate",
       query,
