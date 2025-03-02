@@ -1,4 +1,11 @@
+import prisma from "./prisma";
+
 export async function getBusinessById(businessId: string) {
-  // Dummy implementation: return a simple business object.
-  return { id: businessId, name: "Dummy Business", email: "dummy@business.com" };
+  const business = await prisma.business.findUnique({
+    where: { id: businessId },
+  });
+  if (!business) {
+    throw new Error(`Business with id ${businessId} not found`);
+  }
+  return business;
 }

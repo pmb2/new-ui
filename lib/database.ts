@@ -1,4 +1,12 @@
+import prisma from "./prisma";
+
 export async function saveCompetitorReport(businessId: string, competitor: string, report: unknown) {
-  // Dummy implementation: return the report with a fake ID.
-  return { id: "dummy-report-id", businessId, competitor, report };
+  const savedReport = await prisma.competitorReport.create({
+    data: {
+      businessId,
+      competitorName: competitor,
+      report: report,
+    },
+  });
+  return savedReport;
 }
