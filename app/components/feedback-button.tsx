@@ -94,20 +94,20 @@ export function FeedbackButton() {
                     onValueChange={(value) => setFeedbackType(value as typeof feedbackType)}
                     className="grid grid-cols-3 gap-4"
                   >
-                    {feedbackTypes.map((type) => (
+                    {feedbackTypes.map((option) => (
                       <Label
-                        key={type.id}
-                        htmlFor={type.id}
+                        key={option.id}
+                        htmlFor={option.id}
                         className={`flex flex-col items-center gap-2 p-4 rounded-lg border-2 cursor-pointer transition-colors hover:bg-gray-50
-                          ${feedbackType === type.id ? "border-[#FF1681]" : "border-gray-200"}`}
+                          ${currentFeedbackType === option.id ? "border-[#FF1681]" : "border-gray-200"}`}
                       >
-                        <RadioGroupItem value={type.id} id={type.id} className="sr-only" />
-                        <type.icon
-                          className={`h-6 w-6 ${type === feedbackType.id ? "text-[#FF1681]" : "text-gray-500"}`}
+                        <RadioGroupItem value={option.id} id={option.id} className="sr-only" />
+                        <option.icon
+                          className={`h-6 w-6 ${currentFeedbackType === option.id ? "text-[#FF1681]" : "text-gray-500"}`}
                         />
                         <div className="text-center">
-                          <div className="font-medium text-sm">{type.title}</div>
-                          <div className="text-xs text-gray-500">{type.description}</div>
+                          <div className="font-medium text-sm">{option.title}</div>
+                          <div className="text-xs text-gray-500">{option.description}</div>
                         </div>
                       </Label>
                     ))}
