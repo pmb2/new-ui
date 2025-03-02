@@ -171,7 +171,7 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
   const [isEditing, setIsEditing] = useState(false)
   const [currentStepIndex, setCurrentStepIndex] = useState(0)
   const [isRunningCheck, setIsRunningCheck] = useState(false)
-  const [complianceReport, setComplianceReport] = useState<any>(null)
+  const [complianceReport, setComplianceReport] = useState<{ status: string; completionRate: number; issues: { type: string; severity: string; description: string }[] } | null>(null)
   const businessId = 1; // Mock business ID
   const [currentActionIndex, setCurrentActionIndex] = useState(0)
   const [isMemoriesOpen, setIsMemoriesOpen] = useState(false)
@@ -396,7 +396,7 @@ export default function BusinessProfileModal({ onClose }: { onClose: () => void 
                     <div>
                       <h4 className="text-lg font-medium mb-3">Issues Found</h4>
                       <ul className="space-y-3">
-                        {complianceReport.issues.map((issue: any, index: number) => (
+                        {complianceReport.issues.map((issue, index: number) => (
                           <li key={index} className="flex items-start gap-2">
                             <span
                               className={`w-2 h-2 rounded-full mt-2 ${
