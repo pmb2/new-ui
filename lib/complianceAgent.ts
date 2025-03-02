@@ -1,3 +1,4 @@
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 export function createComplianceSupervisorAgent(_options: unknown) {
   // Dummy implementation: return an agent with a runAllChecks method.
   return {
